@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Nim
+        uses: nim-lang/setup-nimble-action@2cecfd7eb446af54b289e24962ca9a5152e245f6
+
+      - name: Build
+        run: nimble buildWindows
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build-windows/DMusic.zip

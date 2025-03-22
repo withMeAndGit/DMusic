@@ -48,7 +48,7 @@ task buildWindows, "cross-compile from Linux to Windows":
         discard
     
     if not dirExists("zlib-1.3"):
-      exec "wget https://zlib.net/zlib-1.3.tar.gz"
+      exec "wget https://zlib.net/fossils/zlib-1.3.tar.gz"
       exec "tar -xf zlib-1.3.tar.gz"
       rmFile "zlib-1.3.tar.gz"
 

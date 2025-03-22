@@ -16,6 +16,9 @@ jobs:
         with:
           nim-version: "2.2.x"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup
+        run: echo "export PATH='\$PATH:~/.nimble/bin/dmusic'" >> ~/.bashrc
           
       - name: Build
         run: nimble buildWindows

@@ -18,7 +18,7 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup
-        run: sudo apt install cmake -y; echo "export PATH='\$PATH:~/.nimble/bin/dmusic'" >> ~/.bashrc
+        run: sudo apt install cmake gcc -y; echo "export PATH='\$PATH:~/.nimble/bin/dmusic'" >> ~/.bashrc
           
       - name: Build
         run: nimble buildWindows

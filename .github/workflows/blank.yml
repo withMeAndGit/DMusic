@@ -14,7 +14,7 @@ jobs:
       - name: Setup Nim
         uses: nim-lang/setup-nimble-action@2cecfd7eb446af54b289e24962ca9a5152e245f6
         with:
-          nimble-version: "2.2.0"
+          nim-version: "2.2.0"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup
